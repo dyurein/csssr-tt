@@ -7,9 +7,8 @@ import long_right from '../../../../images/long-right.png'
 import triangle from '../../../../images/triangle.png'
 
 
-
 const JsSkillWrap = styled.div`
-    margin-top: 30px;
+    margin-top: 21px;
 `
 const JsSkillTitle = styled.h2`
     font-size: 21px;
@@ -31,7 +30,7 @@ const RangeLabels = styled.div`
     display: flex;
     justify-content: space-between;
 `
-const RangeLabel = styled.span`
+const RangeLabel = styled.label`
     font-size: 11px;
     font-weight: 700;
     line-height: 22px;
@@ -49,45 +48,23 @@ const RangeLabel = styled.span`
         background-repeat: no-repeat;
         background-position: top center;
         background-size: contain;
-        top: -25px;
+        top: -26px;
         left: 0;
         width: 21px;
         height: 15px;
     }
-    &::after {
-        content: '';
-        position: absolute;
-        background-image: ${props => props.triangle ? `url(${triangle})` : `url()`};
-        background-repeat: no-repeat;
-        background-position: top center;
-        top: -46px;
-        left: 92%;
-        width: 16px;
-        height: 15px;
-    }
-    
-    &:first-child {
+    &:first-of-type {
         &::before {
-            content: '';
-            position: absolute;
             background-image: url(${long_left});
-            background-repeat: no-repeat;
-            background-position: top center;
-            background-size: contain;
             top: -28px;
-            left: 2px;
+            left: 4px;
             width: 16px;
             height: 26px;
         }
     }
-    &:last-child {
+    &:last-of-type {
         &::before {
-            content: '';
-            position: absolute;
             background-image: url(${long_right});
-            background-repeat: no-repeat;
-            background-position: top center;
-            background-size: contain;
             top: -28px;
             left: auto;
             right: -3px;
@@ -97,18 +74,70 @@ const RangeLabel = styled.span`
     }
     
 `
+const RangeCheckbox = styled.input`
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    
+    
+    &:checked + label::after,
+    &:not(:checked) + label::after {
+        content: '';
+        position: absolute;
+        background: url(${triangle});
+        background-repeat: no-repeat;
+        background-position: top center;
+        top: -46px;
+        left: 2px;
+        width: 16px;
+        height: 15px;
+        transition: all 0.2s ease;
+    }
+    &:last-of-type {
+        &:checked + label::after,
+        &:not(:checked) + label::after {
+            right: -6px;
+            left: auto;
+
+        }
+    }
+    &:not(:checked) + label::after {
+        opacity: 0;
+        transform: scale(0);
+        
+    }
+    &:checked + label::after {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+`
 
 
 const JsSkill = () => {
     return (
         <JsSkillWrap>
             <JsSkillTitle>Уровень владения JavaScript</JsSkillTitle>
-            <RangeScale />
+            <RangeScale/>
             <RangeLabels>
-                <RangeLabel>Не владею</RangeLabel>
-                <RangeLabel>Использую готовые решения</RangeLabel>
-                <RangeLabel triangle>Использую готовые решения <br/> и умею их переделывать</RangeLabel>
-                <RangeLabel>Пишу сложный JS с нуля</RangeLabel>
+
+                <RangeCheckbox type="radio" id="skill_1" name="jsskill"/>
+                <RangeLabel for="skill_1">Не владею</RangeLabel>
+
+
+                <RangeCheckbox type="radio" id="skill_2" name="jsskill" defaultChecked/>
+                <RangeLabel for="skill_2">Использую готовые решения</RangeLabel>
+
+
+                <RangeCheckbox type="radio" id="skill_3" name="jsskill"/>
+                <RangeLabel for="skill_3">Использую готовые решения <br/> и умею их переделывать</RangeLabel>
+
+
+                <RangeCheckbox type="radio" id="skill_4" name="jsskill" last/>
+                <RangeLabel for="skill_4">Пишу сложный JS с нуля</RangeLabel>
             </RangeLabels>
         </JsSkillWrap>
     )
