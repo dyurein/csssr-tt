@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import scale from '../../../../images/scale.png'
+import scale_line from '../../../../images/scale.png'
 import short from '../../../../images/short.png'
 import long_left from '../../../../images/long-left.png'
 import long_right from '../../../../images/long-right.png'
@@ -19,7 +19,7 @@ const JsSkillTitle = styled.h2`
 const RangeScale = styled.div`
     display: flex;
     width: 100%;
-    background-image: url(${scale});
+    background-image: url(${scale_line});
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% 4rem;
@@ -72,7 +72,7 @@ const RangeLabel = styled.label`
             height: 26px;
         }
     }
-    
+
 `
 const RangeCheckbox = styled.input`
     position:absolute;
@@ -81,8 +81,8 @@ const RangeCheckbox = styled.input`
     width:1px;
     height:1px;
     overflow:hidden;
-    
-    
+
+
     &:checked + label::after,
     &:not(:checked) + label::after {
         content: '';
@@ -107,7 +107,7 @@ const RangeCheckbox = styled.input`
     &:not(:checked) + label::after {
         opacity: 0;
         transform: scale(0);
-        
+
     }
     &:checked + label::after {
         opacity: 1;
@@ -142,5 +142,7 @@ const JsSkill = () => {
         </JsSkillWrap>
     )
 }
+
+
 
 export default JsSkill;

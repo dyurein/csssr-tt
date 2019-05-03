@@ -6,7 +6,7 @@ import date_line from '../../../../images/date-line.png'
 const DateWrap = styled.div`
     display: flex;
     align-items: flex-end;
-    margin-top: 100px;
+    margin-top: 91px;
 `
 const DateTitle = styled.h3`
     font-size: 20px;
@@ -31,7 +31,7 @@ const DateData = styled.span`
     font-size: 30px;
     line-height: 36px;
     color: #231f20;
-    transform: translateY(-18px);
+    transform: translateY(-21px);
     text-indent: 13px;
     display: inline-block;
 `

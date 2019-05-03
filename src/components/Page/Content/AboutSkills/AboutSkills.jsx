@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
-import checkbox from '../../../../images/checkbox.png'
 
 import Checkbox from "../../Checkbox/Checkbox";
 
@@ -29,33 +28,10 @@ const Skills = styled.div`
     align-content: space-between;
 `
 
-const Skill = styled.span`
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 25px;
-    color: #000;
-    margin-bottom: 9px;
-    position: relative;
-    padding-left: 25px;
-    &:last-child{
-        margin-bottom: 0;
-        width: 200px;
-    }
-    
-    ${props => props.active && css`
-        border: 1px solid red
-        &::before {
-            background-color: #000;
-        }
-    `}
-    &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 3px;
-        width: 18px;
-        height: 18px;
-        background: url(${checkbox});
+const InnerLink = styled.a`
+    color: #1f5f97;
+    &:visited {
+        color: #1f5f97;
     }
 `
 
@@ -126,7 +102,7 @@ const skillsData = [
         active: true
     },
     {
-        content: <>Читаю <a href="/blog.csssr.ru" target="_blank" rel="noreferrer nofollow">blog.csssr.ru</a></>,
+        content: <>Читаю <InnerLink href="http://blog.csssr.ru" target="_blank" rel="noreferrer nofollow">blog.csssr.ru</InnerLink></>,
         active: true
     },
     {

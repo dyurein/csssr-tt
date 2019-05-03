@@ -21,7 +21,7 @@ const CheckboxLabel = styled.label`
         width: 200px;
     }
 
-    ${props => props.active && css`
+    ${props => props.active && css`{
         border: 1px solid red
         &::before {
             background-color: #000;

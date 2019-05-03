@@ -15,6 +15,7 @@ const Body = styled.div`
         color: #2f1b15;
         box-sizing: border-box;
         background: url(${background_image});
+        padding-bottom: 70px;
 `
 export const Container = styled.div`
     max-width: 771px;

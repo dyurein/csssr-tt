@@ -23,7 +23,7 @@ const TellAboutDescr = styled.div`
     background: transparent;
     background-image: url(${about_line});
     background-repeat: repeat-y;
-    background-size: 100% 3.75rem;
+    background-size: contain;
     background-position: 100% 1.5rem;
     border: none;
     outline: none;
@@ -33,7 +33,8 @@ const TellAboutDescr = styled.div`
     line-height: 3.75rem;
     overflow: hidden;
     min-height: 14.4rem;
-    margin-top: 1.4rem;
+    margin-top: 1rem;
+    padding-left: 8px;
 `
 
 

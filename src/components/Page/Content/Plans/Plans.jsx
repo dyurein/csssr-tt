@@ -6,7 +6,7 @@ import radio_mark from '../../../../images/radio-mark.png'
 
 
 const PlansWrap = styled.div`
-    margin-top: 58px;
+    margin-top: 48px;
 `
 const PlansTitle = styled.h2`
     font-size: 21px;
@@ -22,46 +22,32 @@ const PlansText = styled.p`
 `
 const PlansBlock = styled.div`
     display: flex;
-    margin-top: 20px;
+    margin-top: 15px;
 `
 
 const Plan = styled.div`
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 11px;
     &:last-child {
         margin-right: 0;
     }
 `
 const PlansRadio = styled.input`
-        position:absolute;
-        left:-10000px;
-        top:auto;
-        width:1px;
-        height:1px;
-        overflow:hidden;
-    &:checked,
-    &:not(:checked) {
-        
-    }
-    &:checked + label,
-    &:not(:checked) + label {
-        position: relative;
-        padding-left: 33px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        line-height: 20px;
-        display: inline-block;
-        color: #000;
-    }
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    
     &:checked + label::before,
     &:not(:checked) + label::before {
         content: '';
         position: absolute;
         left: 0;
         top: -3px;
-        width: 32px;
+        width: 37px;
         height: 25px;
         border: none;
         background: url(${radio});
@@ -72,13 +58,13 @@ const PlansRadio = styled.input`
     &:not(:checked) + label::after {
         content: '';
         position: absolute;
-        width: 20px;
+        width: 21px;
         height: 20px;
         background: url(${radio_mark});
         background-position: center;
         background-size: cover;
         top: 3px;
-        left: 6px;
+        left: 8px;
         transition: all 0.2s ease;
     }
     &:not(:checked) + label::after {
@@ -91,6 +77,14 @@ const PlansRadio = styled.input`
     }
 `
 const PlansLabel = styled.label`
+    position: relative;
+    padding-left: 36px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #000;
 `
 
 
