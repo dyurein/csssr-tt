@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import {visibleHidden} from "../../../styles/helpers";
-import radioImage from "../Content/Plans/img/radio.png";
-import radioCheckmarkImage from "../Content/Plans/img/radio-mark.png";
+import radioImage from "./img/radio.png";
+import radioCheckmarkImage from "./img/radio-mark.png";
 
 
 const RadioButtonWrap = styled.div`
@@ -61,10 +61,10 @@ const PlansRadio = styled.input`
 `
 
 
-const RadioButton = ({name, id, children, defaultChecked}) => {
+const RadioButton = ({name, id, children, defaultChecked, props}) => {
     return (
         <RadioButtonWrap>
-            <PlansRadio name={name} id={id} type="radio" defaultChecked={defaultChecked}/>
+            <PlansRadio {...props} name={name} id={id} type="radio" defaultChecked={defaultChecked}/>
             <PlansLabel for={id}>{children}</PlansLabel>
         </RadioButtonWrap>
 

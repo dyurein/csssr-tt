@@ -63,10 +63,10 @@ const CheckboxInput = styled.input`
 `
 
 
-const Checkbox = ({name, id, children, defaultChecked}) => {
+const Checkbox = ({name, id, children, defaultChecked, props}) => {
     return (
         <CheckboxWrap>
-            <CheckboxInput name={name} id={id} type="checkbox" defaultChecked={defaultChecked}/>
+            <CheckboxInput {...props} name={name} id={id} type="checkbox" defaultChecked={defaultChecked}/>
             <CheckboxLabel for={id}>{children}</CheckboxLabel>
         </CheckboxWrap>
 
