@@ -42,6 +42,18 @@ const RangeLabel = styled.label`
         line-height: 19px;
         right: 17px;
     }
+    &::after {
+        content: '';
+        position: absolute;
+        background: url(${Triangle});
+        background-repeat: no-repeat;
+        background-position: top center;
+        top: -46px;
+        left: 2px;
+        width: 16px;
+        height: 15px;
+        transition: all 0.2s ease;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -73,43 +85,26 @@ const RangeLabel = styled.label`
             height: 26px;
         }
     }
+    &:last-of-type {
+        &::after {
+            right: -6px;
+            left: auto;
+        }
+    }
 
 `
 const RangeCheckbox = styled.input`
     ${visibleHidden}
 
-
-    &:checked + label::after,
-    &:not(:checked) + label::after {
-        content: '';
-        position: absolute;
-        background: url(${Triangle});
-        background-repeat: no-repeat;
-        background-position: top center;
-        top: -46px;
-        left: 2px;
-        width: 16px;
-        height: 15px;
-        transition: all 0.2s ease;
-    }
-    &:last-of-type {
-        &:checked + label::after,
-        &:not(:checked) + label::after {
-            right: -6px;
-            left: auto;
-
-        }
-    }
-    &:not(:checked) + label::after {
+    &:not(:checked) + ${RangeLabel}::after {
         opacity: 0;
         transform: scale(0);
 
     }
-    &:checked + label::after {
+    &:checked + ${RangeLabel}::after {
         opacity: 1;
         transform: scale(1);
     }
-
 `
 
 
@@ -120,20 +115,20 @@ const JsSkill = () => {
             <RangeScale/>
             <RangeLabels>
 
-                <RangeCheckbox type="radio" id="skill_1" name="jsskill"/>
-                <RangeLabel for="skill_1">Не владею</RangeLabel>
+                <RangeCheckbox type="radio" id="jsskill_1" name="jsskill"/>
+                <RangeLabel for="jsskill_1">Не владею</RangeLabel>
 
 
-                <RangeCheckbox type="radio" id="skill_2" name="jsskill" defaultChecked/>
-                <RangeLabel for="skill_2">Использую готовые решения</RangeLabel>
+                <RangeCheckbox type="radio" id="jsskill_2" name="jsskill" defaultChecked/>
+                <RangeLabel for="jsskill_2">Использую готовые решения</RangeLabel>
 
 
-                <RangeCheckbox type="radio" id="skill_3" name="jsskill"/>
-                <RangeLabel for="skill_3">Использую готовые решения <br/> и умею их переделывать</RangeLabel>
+                <RangeCheckbox type="radio" id="jsskill_3" name="jsskill"/>
+                <RangeLabel for="jsskill_3">Использую готовые решения <br/> и умею их переделывать</RangeLabel>
 
 
-                <RangeCheckbox type="radio" id="skill_4" name="jsskill" last/>
-                <RangeLabel for="skill_4">Пишу сложный JS с нуля</RangeLabel>
+                <RangeCheckbox type="radio" id="jsskill_4" name="jsskill"/>
+                <RangeLabel for="jsskill_4">Пишу сложный JS с нуля</RangeLabel>
             </RangeLabels>
         </JsSkillWrap>
     )
