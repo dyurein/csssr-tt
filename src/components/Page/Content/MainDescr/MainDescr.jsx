@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import line from '../../../../images/line2.png'
+import Line from './img/line2.png'
 
 
 const Contacts = styled.section`
@@ -23,7 +23,7 @@ const CommonLabel = styled.span`
 `
 const CommonDescr = styled.div`
     margin-left: 17px;
-    background: url(${line}) repeat-x;
+    background: url(${Line}) repeat-x;
     background-size: contain;
     background-position: 0 23px;
     flex-grow: 1;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Header from "./Header/Header";
-import background_image from '../../images/background.jpg'
+import backgroundImage from './img/background.jpg'
 import Content from "./Content/Content";
 
 const PageWrap = styled.body`
@@ -14,7 +14,7 @@ const Body = styled.div`
         max-width: 1000px;
         color: #2f1b15;
         box-sizing: border-box;
-        background: url(${background_image});
+        background: url(${backgroundImage});
         padding-bottom: 70px;
 `
 export const Container = styled.div`

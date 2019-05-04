@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import scale_line from '../../../../images/scale.png'
-import short from '../../../../images/short.png'
-import long_left from '../../../../images/long-left.png'
-import long_right from '../../../../images/long-right.png'
-import triangle from '../../../../images/triangle.png'
+import scaleLine from './img/scale.png'
+import Short from './img/short.png'
+import longLeft from './img/long-left.png'
+import longRight from './img/long-right.png'
+import Triangle from './img/triangle.png'
 import {visibleHidden} from "../../../../styles/helpers";
 
 
@@ -20,7 +20,7 @@ const JsSkillTitle = styled.h2`
 const RangeScale = styled.div`
     display: flex;
     width: 100%;
-    background-image: url(${scale_line});
+    background-image: url(${scaleLine});
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% 4rem;
@@ -45,7 +45,7 @@ const RangeLabel = styled.label`
     &::before {
         content: '';
         position: absolute;
-        background-image: url(${short});
+        background-image: url(${Short});
         background-repeat: no-repeat;
         background-position: top center;
         background-size: contain;
@@ -56,7 +56,7 @@ const RangeLabel = styled.label`
     }
     &:first-of-type {
         &::before {
-            background-image: url(${long_left});
+            background-image: url(${longLeft});
             top: -28px;
             left: 4px;
             width: 16px;
@@ -65,7 +65,7 @@ const RangeLabel = styled.label`
     }
     &:last-of-type {
         &::before {
-            background-image: url(${long_right});
+            background-image: url(${longRight});
             top: -28px;
             left: auto;
             right: -3px;
@@ -83,7 +83,7 @@ const RangeCheckbox = styled.input`
     &:not(:checked) + label::after {
         content: '';
         position: absolute;
-        background: url(${triangle});
+        background: url(${Triangle});
         background-repeat: no-repeat;
         background-position: top center;
         top: -46px;

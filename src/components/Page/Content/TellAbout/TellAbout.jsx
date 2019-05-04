@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import about_line from '../../../../images/about-line.png'
+import aboutLine from './img/about-line.png'
 
 
 const TellAboutWrap = styled.div`
@@ -21,7 +21,7 @@ const TellAboutText = styled.p`
 const TellAboutDescr = styled.div`
     width: 100%;
     background: transparent;
-    background-image: url(${about_line});
+    background-image: url(${aboutLine});
     background-repeat: repeat-y;
     background-size: contain;
     background-position: 100% 1.5rem;

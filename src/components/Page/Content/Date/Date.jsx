@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import date_line from '../../../../images/date-line.png'
+import dateLine from './img/date-line.png'
 
 
 const DateWrap = styled.div`
@@ -21,7 +21,7 @@ const DateLine = styled.div`
     color: #231f20;
     padding-right: 18px;
     display: inline-block;
-    background: url(${date_line}) repeat-x;
+    background: url(${dateLine}) repeat-x;
     background-size: contain;
     background-position: 0 13px;
     margin-left: 18px;

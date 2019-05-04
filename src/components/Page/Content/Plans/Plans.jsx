@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import radio from '../../../../images/radio.png'
-import radio_mark from '../../../../images/radio-mark.png'
+import radioImage from './img/radio.png'
+import radioCheckmarkImage from './img/radio-mark.png'
 import {visibleHidden} from "../../../../styles/helpers";
 
 
@@ -46,7 +46,7 @@ const PlansRadio = styled.input`
         width: 37px;
         height: 25px;
         border: none;
-        background: url(${radio});
+        background: url(${radioImage});
         background-position: center;
         background-size: cover;
     }
@@ -56,7 +56,7 @@ const PlansRadio = styled.input`
         position: absolute;
         width: 21px;
         height: 20px;
-        background: url(${radio_mark});
+        background: url(${radioCheckmarkImage});
         background-position: center;
         background-size: cover;
         top: 3px;

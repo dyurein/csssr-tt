@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Container} from '../Page';
-import title_image from '../../../images/title.png'
+import titleImage from './img/title.png'
 import MainDescr from "./MainDescr/MainDescr";
 import AboutSkills from "./AboutSkills/AboutSkills";
 import JsSkill from "./JsSkill/JsSkill";
@@ -31,7 +31,7 @@ const Content = () => {
             <Container>
                 <ContentInner>
                     <TitleWrap>
-                        <Title src={title_image}/>
+                        <Title src={titleImage}/>
                     </TitleWrap>
                     <MainDescr />
                     <AboutSkills/>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import checkbox from "../../../images/checkbox.png";
-import checked from '../../../images/checked.png'
+import checkboxImage from "./img/checkbox.png";
+import checkmarkImage from './img/checked.png'
 import {visibleHidden} from "../../../styles/helpers";
 
 
@@ -31,7 +31,7 @@ const CheckboxLabel = styled.label`
       width: 18px;
       height: 18px;
       border: none;
-      background: url(${checkbox});
+      background: url(${checkboxImage});
       background-position: center;
       background-size: cover;
     }
@@ -40,7 +40,7 @@ const CheckboxLabel = styled.label`
       position: absolute;
       width: 20px;
       height: 20px;
-      background: url(${checked});
+      background: url(${checkmarkImage});
       background-position: center;
       background-size: cover;
       top: -6px;

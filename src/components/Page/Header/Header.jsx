@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../../../images/logo.png'
-import stamp_image from '../../../images/stamp.png'
+import logoImage from './img/logo.png'
+import stampImage from './img/stamp.png'
 import {Container} from "../Page";
 
 const HeaderWrap = styled.header`
@@ -30,10 +30,10 @@ const Header = () => {
             <Container>
                 <HeaderInner>
                     <LogoWrap>
-                        <Logo src={logo}/>
+                        <Logo src={logoImage}/>
                     </LogoWrap>
                     <StampWrap>
-                        <Stamp src={stamp_image}/>
+                        <Stamp src={stampImage}/>
                     </StampWrap>
                 </HeaderInner>
             </Container>
