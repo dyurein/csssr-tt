@@ -30,10 +30,10 @@ const Header = () => {
             <Container>
                 <HeaderInner>
                     <LogoWrap>
-                        <Logo src={logoImage}/>
+                        <Logo src={logoImage} alt="Logo"/>
                     </LogoWrap>
                     <StampWrap>
-                        <Stamp src={stampImage}/>
+                        <Stamp src={stampImage} alt="Stamp"/>
                     </StampWrap>
                 </HeaderInner>
             </Container>

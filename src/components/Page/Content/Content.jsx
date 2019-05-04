@@ -31,7 +31,7 @@ const Content = () => {
             <Container>
                 <ContentInner>
                     <TitleWrap>
-                        <Title src={titleImage}/>
+                        <Title src={titleImage} alt="Main title"/>
                     </TitleWrap>
                     <MainDescr />
                     <AboutSkills/>
