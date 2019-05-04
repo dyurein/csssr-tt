@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import checkbox from "../../../images/checkbox.png";
 import checked from '../../../images/checked.png'
+import {visibleHidden} from "../../../styles/helpers";
 
 
 const CheckboxWrap = styled.div`
@@ -49,12 +50,7 @@ const CheckboxLabel = styled.label`
 `
 
 const CheckboxInput = styled.input`
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
+    ${visibleHidden}
 
     &:not(:checked) + label::after {
         opacity: 0;

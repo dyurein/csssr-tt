@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import radio from '../../../../images/radio.png'
 import radio_mark from '../../../../images/radio-mark.png'
+import {visibleHidden} from "../../../../styles/helpers";
 
 
 
@@ -34,12 +35,7 @@ const Plan = styled.div`
     }
 `
 const PlansRadio = styled.input`
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
+    ${visibleHidden}
     
     &:checked + label::before,
     &:not(:checked) + label::before {

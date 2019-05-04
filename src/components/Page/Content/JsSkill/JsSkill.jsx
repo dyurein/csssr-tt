@@ -5,6 +5,7 @@ import short from '../../../../images/short.png'
 import long_left from '../../../../images/long-left.png'
 import long_right from '../../../../images/long-right.png'
 import triangle from '../../../../images/triangle.png'
+import {visibleHidden} from "../../../../styles/helpers";
 
 
 const JsSkillWrap = styled.div`
@@ -75,12 +76,7 @@ const RangeLabel = styled.label`
 
 `
 const RangeCheckbox = styled.input`
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
+    ${visibleHidden}
 
 
     &:checked + label::after,
