@@ -52,22 +52,22 @@ const CheckboxLabel = styled.label`
 const CheckboxInput = styled.input`
     ${visibleHidden}
 
-    &:not(:checked) + label::after {
+    &:not(:checked) + ${CheckboxLabel}::after {
         opacity: 0;
         transform: scale(0);
     }
-    &:checked + label::after {
+    &:checked + ${CheckboxLabel}::after {
         opacity: 1;
         transform: scale(1);
     }
 `
 
 
-const Checkbox = ({name, children, defaultChecked}) => {
+const Checkbox = ({name, id, children, defaultChecked}) => {
     return (
         <CheckboxWrap>
-            <CheckboxInput name={name} type="checkbox" defaultChecked={defaultChecked}/>
-            <CheckboxLabel>{children}</CheckboxLabel>
+            <CheckboxInput name={name} id={id} type="checkbox" defaultChecked={defaultChecked}/>
+            <CheckboxLabel for={id}>{children}</CheckboxLabel>
         </CheckboxWrap>
 
     )

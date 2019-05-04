@@ -40,79 +40,98 @@ const InnerLink = styled.a`
 const skillsData = [
     {
         content: 'БЭМ/OOCSS',
-        active: true
+        active: true,
+        id: 'skill_1'
     },
     {
         content: 'Pug (Jade)',
-        active: true
+        active: true,
+        id: 'skill_2'
     },
     {
         content: 'Stylus/LESS/SASS',
-        active: true
+        active: true,
+        id: 'skill_3'
     },
     {
         content: 'Работаю с SVG',
-        active: false
+        active: false,
+        id: 'skill_4'
     },
     {
         content: 'Верстаю семантично',
-        active: true
+        active: true,
+        id: 'skill_5'
     },
     {
         content: 'Accessibility (A11Y)',
-        active: true
+        active: true,
+        id: 'skill_6'
     },
     {
         content: 'ES2015/ES2016',
-        active: false
+        active: false,
+        id: 'skill_7'
     },
     {
         content: 'Gulp/GRUNT',
-        active: true
+        active: true,
+        id: 'skill_8'
     },
     {
         content: 'Webpack',
-        active: false
+        active: false,
+        id: 'skill_9'
     },
     {
         content: 'Дружу с WebGL',
-        active: false
+        active: false,
+        id: 'skill_10'
     },
     {
         content: 'jQuery',
-        active: true
+        active: true,
+        id: 'skill_11'
     },
     {
         content: 'Знаю/изучаю Angular',
-        active: false
+        active: false,
+        id: 'skill_12'
     },
     {
         content: 'Знаю/изучаю React',
-        active: true
+        active: true,
+        id: 'skill_13'
     },
     {
         content: 'Знаю/изучаю Node.js',
-        active: false
+        active: false,
+        id: 'skill_14'
     },
     {
         content: 'Использую Git',
-        active: true
+        active: true,
+        id: 'skill_15'
     },
     {
         content: 'С глазомером всё ок',
-        active: true
+        active: true,
+        id: 'skill_16'
     },
     {
         content: <>Читаю <InnerLink href="http://blog.csssr.ru" target="_blank" rel="noreferrer nofollow">blog.csssr.ru</InnerLink></>,
-        active: true
+        active: true,
+        id: 'skill_17'
     },
     {
         content: 'Я ленивый(-ая)',
-        active: false
+        active: false,
+        id: 'skill_18'
     },
     {
         content: 'У меня хороший английский',
-        active: true
+        active: true,
+        id: 'skill_19'
     },
 ]
 
@@ -126,8 +145,8 @@ const AboutSkills = () => {
                 будете справляться.
             </AboutSkillsText>
             <Skills>
-                {skillsData.map(({content, active}) =>
-                    <Checkbox title="skill" defaultChecked={active}>{content}</Checkbox>
+                {skillsData.map(({content, id, active}) =>
+                    <Checkbox title="skill" id={id} defaultChecked={active}>{content}</Checkbox>
                 )}
             </Skills>
         </AboutSkillsWrap>
