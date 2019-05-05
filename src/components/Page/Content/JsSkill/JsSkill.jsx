@@ -24,12 +24,12 @@ const RangeScale = styled.div`
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% 4rem;
-    position: relative;
     height: 75px;
 `
 const RangeLabels = styled.div`
     display: flex;
     justify-content: space-between;
+    position: relative;
 `
 const RangeLabel = styled.label`
     font-size: 11px;
@@ -38,7 +38,7 @@ const RangeLabel = styled.label`
     position: relative;
     cursor: pointer;
     top: -17px;
-    &:nth-child(3){
+    &:nth-of-type(3){
         line-height: 19px;
         right: 17px;
     }
@@ -52,7 +52,7 @@ const RangeLabel = styled.label`
         left: 2px;
         width: 16px;
         height: 15px;
-        transition: all 0.2s ease;
+        
     }
     &::before {
         content: '';
@@ -95,15 +95,18 @@ const RangeLabel = styled.label`
 `
 const RangeCheckbox = styled.input`
     ${visibleHidden}
-
+    display: none;
+    
     &:not(:checked) + ${RangeLabel}::after {
         opacity: 0;
         transform: scale(0);
+        transition: all 0.2s ease;
 
     }
     &:checked + ${RangeLabel}::after {
         opacity: 1;
         transform: scale(1);
+        transition: all 0.2s ease;
     }
 `
 
@@ -116,19 +119,19 @@ const JsSkill = () => {
             <RangeLabels>
 
                 <RangeCheckbox type="radio" id="jsskill_1" name="jsskill"/>
-                <RangeLabel for="jsskill_1">Не владею</RangeLabel>
+                <RangeLabel htmlFor="jsskill_1">Не владею</RangeLabel>
 
 
                 <RangeCheckbox type="radio" id="jsskill_2" name="jsskill" defaultChecked/>
-                <RangeLabel for="jsskill_2">Использую готовые решения</RangeLabel>
+                <RangeLabel htmlFor="jsskill_2">Использую готовые решения</RangeLabel>
 
 
                 <RangeCheckbox type="radio" id="jsskill_3" name="jsskill"/>
-                <RangeLabel for="jsskill_3">Использую готовые решения <br/> и умею их переделывать</RangeLabel>
+                <RangeLabel htmlFor="jsskill_3">Использую готовые решения <br/> и умею их переделывать</RangeLabel>
 
 
                 <RangeCheckbox type="radio" id="jsskill_4" name="jsskill"/>
-                <RangeLabel for="jsskill_4">Пишу сложный JS с нуля</RangeLabel>
+                <RangeLabel htmlFor="jsskill_4">Пишу сложный JS с нуля</RangeLabel>
             </RangeLabels>
         </JsSkillWrap>
     )

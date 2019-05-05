@@ -145,7 +145,7 @@ const AboutSkills = () => {
             </AboutSkillsText>
             <Skills>
                 {skillsData.map(({content, id, active}) =>
-                    <Checkbox title="skill" id={id} defaultChecked={active}>{content}</Checkbox>
+                    <Checkbox title="skill" id={id} key={id} defaultChecked={active}>{content}</Checkbox>
                 )}
             </Skills>
         </AboutSkillsWrap>

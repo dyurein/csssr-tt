@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import checkboxImage from "./img/checkbox.png";
-import checkmarkImage from './img/checked.png'
+import checkmarkImage from './img/checked.png';
 import {visibleHidden} from "../../../styles/helpers";
 
 
@@ -68,7 +68,7 @@ const Checkbox = ({name, id, children, defaultChecked, props}) => {
     return (
         <CheckboxWrap>
             <CheckboxInput {...props} name={name} id={id} type="checkbox" defaultChecked={defaultChecked}/>
-            <CheckboxLabel for={id}>{children}</CheckboxLabel>
+            <CheckboxLabel htmlFor={id}>{children}</CheckboxLabel>
         </CheckboxWrap>
 
     )

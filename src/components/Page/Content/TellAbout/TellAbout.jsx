@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Textarea from 'react-textarea-autosize';
 import aboutLine from './img/about-line.png'
 
 
@@ -18,13 +19,13 @@ const TellAboutText = styled.p`
     color: #3d3d3d;
     margin: 0;
 `
-const TellAboutDescr = styled.div`
+const TellAboutDescr = styled(Textarea)`
     width: 100%;
     background: transparent;
     background-image: url(${aboutLine});
     background-repeat: repeat-y;
     background-size: contain;
-    background-position: 100% 1.5rem;
+    background-position: 100% 1.3rem;
     border: none;
     outline: none;
     font-family: 'Courier New', serif;
@@ -48,7 +49,7 @@ const TellAbout = () => {
                 от&nbsp;работы в&nbsp;CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут
                 добавляться автоматически.
             </TellAboutText>
-            <TellAboutDescr contentEditable="true">
+            <TellAboutDescr>
                 Привлекла возможность работать удаленно, не&nbsp;тратя время на&nbsp;ежедневные поездки в&nbsp;офис.
                 Также наслышан о&nbsp;надежности вашей компании. И&nbsp;самое главное, возможность повышать и&nbsp;развивать
                 свои навыки в этой сфере, работая над проектами в&nbsp;команде.

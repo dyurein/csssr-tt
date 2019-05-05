@@ -65,8 +65,8 @@ const PlansRadio = styled.input`
 const RadioButton = ({name, id, children, defaultChecked, props}) => {
     return (
         <RadioButtonWrap>
-            <PlansRadio {...props} name={name} id={id} type="radio" defaultChecked={defaultChecked}/>
-            <PlansLabel for={id}>{children}</PlansLabel>
+            <PlansRadio {...props} name={name} id={id} key={id} type="radio" defaultChecked={defaultChecked}/>
+            <PlansLabel htmlFor={id}>{children}</PlansLabel>
         </RadioButtonWrap>
 
     )

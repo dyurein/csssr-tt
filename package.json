@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",
+    "react-textarea-autosize": "^7.1.0",
     "styled-components": "^4.2.0"
   },
   "scripts": {
@@ -21,11 +23,13 @@
   },
   "browserslist": {
     "production": [
+      "ie 11",
       ">0.2%",
       "not dead",
       "not op_mini all"
     ],
     "development": [
+      "ie 11",
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
