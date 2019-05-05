@@ -6,7 +6,11 @@ import {visibleHidden} from "../../../styles/helpers";
 
 
 const CheckboxWrap = styled.div`
-    margin-bottom: 17px;
+    margin-bottom: 15px;
+    &:last-child {
+        margin-bottom: 0;
+        width: 200px;
+    }
 `
 const CheckboxLabel = styled.label`
     font-size: 18px;
@@ -14,15 +18,11 @@ const CheckboxLabel = styled.label`
     line-height: 20px;
     color: #000;
     user-select: none;
-    margin-bottom: 9px;
     position: relative;
     padding-left: 26px;
     cursor: pointer;
     display: inline-block;
-    &:last-child {
-        margin-bottom: 0;
-        width: 200px;
-    }
+    
     &::before {
       content: '';
       position: absolute;
@@ -45,7 +45,6 @@ const CheckboxLabel = styled.label`
       background-size: cover;
       top: -6px;
       left: 1px;
-      transition: all 0.2s ease;
     }
 `
 
@@ -55,10 +54,12 @@ const CheckboxInput = styled.input`
     &:not(:checked) + ${CheckboxLabel}::after {
         opacity: 0;
         transform: scale(0);
+        transition: all 0.5s ease-in-out;
     }
     &:checked + ${CheckboxLabel}::after {
         opacity: 1;
         transform: scale(1);
+        transition: all 0.5s ease-in-out;
     }
 `
 

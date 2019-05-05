@@ -26,7 +26,6 @@ const Skills = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     height: 260px;
-    align-content: space-between;
 `
 
 const InnerLink = styled.a`

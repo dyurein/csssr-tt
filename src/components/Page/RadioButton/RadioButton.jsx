@@ -44,7 +44,6 @@ const PlansLabel = styled.label`
         background-size: cover;
         top: 3px;
         left: 8px;
-        transition: all 0.2s ease;
     }
 `
 const PlansRadio = styled.input`
@@ -53,10 +52,12 @@ const PlansRadio = styled.input`
     &:not(:checked) + ${PlansLabel}::after {
         opacity: 0;
         transform: scale(0);
+        transition: all 0.2s ease;
     }
     &:checked + ${PlansLabel}::after {
         opacity: 1;
         transform: scale(1);
+        transition: all 0.2s ease;
     }
 `
 
