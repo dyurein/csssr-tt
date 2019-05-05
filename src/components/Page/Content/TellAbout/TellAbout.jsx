@@ -4,7 +4,7 @@ import Textarea from 'react-textarea-autosize';
 import aboutLine from './img/about-line.png'
 
 
-const TellAboutWrap = styled.div`
+const TellAboutWrap = styled.section`
     margin-top: 3px;
 `
 const TellAboutTitle = styled.h2`

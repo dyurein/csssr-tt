@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import dateLine from './img/date-line.png'
 
 
-const DateWrap = styled.div`
+const DateWrap = styled.section`
     display: flex;
     align-items: flex-end;
     margin-top: 91px;

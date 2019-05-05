@@ -5,7 +5,7 @@ import Checkbox from "../../Checkbox/Checkbox";
 
 
 
-const AboutSkillsWrap = styled.div`
+const AboutSkillsWrap = styled.section`
     margin-top: 48px;
 `
 const AboutSkillsTitle = styled.h2`

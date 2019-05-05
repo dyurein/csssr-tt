@@ -8,7 +8,7 @@ import Triangle from './img/triangle.png'
 import {visibleHidden} from "../../../../styles/helpers";
 
 
-const JsSkillWrap = styled.div`
+const JsSkillWrap = styled.section`
     margin-top: 21px;
 `
 const JsSkillTitle = styled.h2`

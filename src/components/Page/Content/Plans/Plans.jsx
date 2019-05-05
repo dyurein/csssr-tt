@@ -4,7 +4,7 @@ import RadioButton from "../../RadioButton/RadioButton";
 
 
 
-const PlansWrap = styled.div`
+const PlansWrap = styled.section`
     margin-top: 48px;
 `
 const PlansTitle = styled.h2`
